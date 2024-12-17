@@ -1,4 +1,3 @@
-
 inputs = File.read("./day1.txt").split("\n")
 
 part1 = inputs.map{ |row| row.split.map(&:to_i) }.transpose.map(&:sort).transpose.map{|pair| pair.reduce(:-).abs}.reduce(:+)
